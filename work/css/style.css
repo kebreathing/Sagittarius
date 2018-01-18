@@ -1,0 +1,36 @@
+* {
+  transition: all 0.1s ease;
+}
+
+.hb {
+  width: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #C2C2C2;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hb:hover{
+  color: #8E8E8E;
+  background-color: #D1EEEE;
+  text-shadow: 0 1px 1px;
+}
+
+.small-img {
+  padding: 1em 1em 1em 1em;
+  background-color: #C1C1C1;
+}
+
+.hot-img {
+  padding: 1em 1em 1em 1em;
+  background-color: #C1C1C1;
+}
+
+.small-img img {
+  width: 100%;
+}
+
+.hot-img img {
+  width: 100%;
+}
