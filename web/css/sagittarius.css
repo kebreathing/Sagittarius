@@ -1,8 +1,18 @@
+* {
+  transition: all 0.5s ease 0s;
+}
+body::-webkit-scrollbar {
+  display:none;
+  /*  优秀！！ */
+  /* overflow-y: hidden; 我要的是滚动条消失，但是可以滚动! */
+}
+
 header {
   width: 100%;
   height: 48px;
   background-color: black;
   display: inline-block;
+  text-align: center;
 }
 
 a {
@@ -13,8 +23,20 @@ a:hover {
   color: white;
 }
 
+/* 导航栏变化 */
+nav ul {
+  list-style: none;
+}
+
+
+nav ul li:hover{
+  background-color: black;
+}
+
+
+/* 低尺寸设备会向上影响高尺寸设备 */
 @media (min-width:320px) {
-  #header-min-device {
+  #header-device {
     display: inline-block;
     float: left;
     width: 80%;
@@ -23,7 +45,7 @@ a:hover {
     text-align: center;
   }
 
-  #header-min-device span{
+  #header-device span{
     color: white;
     font-size: 100%;
   }
@@ -48,7 +70,7 @@ a:hover {
     margin-top: 15px;
   }
 
-  nav {
+  #nav-small {
     /* display: inline-block; */
     display: none;
     background-color: grey;
@@ -56,26 +78,21 @@ a:hover {
     height: 96px;
   }
 
-  nav ul {
+  #nav-small ul {
     width: 100%;
-    height: 96px;
-    list-style: none;
     /* text-align: center; */
   }
 
-  nav ul li {
+  #nav-small ul li {
     width: 100%;
     height: 32px;
     line-height: 32px;
     margin: 0;          /* 重点： 删除li之间的间距！*/
   }
 
-  nav ul li:hover{
-    background-color: black;
-    width: 100%;
-  }
 
-  nav ul li a{
+
+  #nav-small ul li a{
     width: 100%;
     height: 100%;
     line-height: 100%;
@@ -83,7 +100,7 @@ a:hover {
     color: white;
   }
 
-  nav img {
+  #nav-small img {
     width: 32px;
     height: 32px;
   }
@@ -107,14 +124,76 @@ a:hover {
     line-height: 100%;
     margin-left: 5px;
   }
+
+  #nav-large {
+    display: none;
+  }
+
+  /* 内容框 */
+  .s_container {
+    margin-top: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
 }
 
-/* 内容框 */
-.s_container {
-  margin-top: 1em;
-  width: 100%;
-  text-align: center;
+@media (min-width:550px) {
+
+  #header-device {
+    width: 100%;
+  }
+
+  #nav-min-device {
+    display: none;
+  }
+
+  #nav-small {
+    display: none;
+  }
+
+  #nav-large {
+    display: table;
+    width: 100%;
+    height: 32px;
+    margin: 0 auto;
+    background-color: grey;
+  }
+
+  #nav-large ul {
+    display: table-row;
+    list-style: none;
+    width: 100%;
+  }
+
+  #nav-large ul li {
+    display: table-cell;
+    width: 30%;
+    line-height: 32px;
+  }
+
+  #nav-large ul li a{
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  /* 内容框 */
+  .s_container {
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+  }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+
 
 .col-content {
   text-align: center;
@@ -127,4 +206,9 @@ a:hover {
   background-color: rgba(51, 51, 51, 0.75);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.65);
+  /* box-shadow
+  第一个数值如果为0是左右都有，第二个数值则是上下
+  正表示右下，负表示左上
+  */
 }
+/* background-image: url() 默认的文件夹位置在css文件夹，而不是根目录 */

@@ -1,20 +1,24 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="zh"/>
     <link href="css/normalize.css" rel="stylesheet" text="text/css"/>
     <link href="css/skeleton.css" rel="stylesheet" text="text/css"/>
     <link href="css/sagittarius.css" rel="stylesheet" text="text/css"/>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/sagittarius.js"></script>
   </head>
   <body>
     <header>
-      <div id="header-min-device">
+      <div id="header-device">
         <span>CHRIS MAKE THIS.</span>
       </div>
       <div id="nav-min-device">
         <img src="img/menu.png" />
       </div>
 
-      <nav>
+      <nav id="nav-small">
         <ul>
           <li>
             <a href="#">
@@ -38,21 +42,69 @@
           </li>
         </ul>
       </nav>
+
+      <nav id="nav-large">
+        <ul>
+          <li>
+            <a href="#">
+              <div class="nav-item-label">ARTICLE</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="nav-item-label"><span>GALLARY</span></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="nav-item-label">GAME</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
     </header>  <!--! end. header -->
 
-    <div class="container s_container">
-      <div class="row">
-        <div class="one-half column col-content">
+    <div class="s_container">
+      <div class="container">
+        <div class="row">
+          <div class="one-third column col-content">
+              <div class="content">
+
+              </div>
+          </div>
+
+          <div class="one-third column">
             <div class="content">
 
             </div>
+          </div>
+          
+          <div class="one-third column">
+            <div class="content">
+
+            </div>
+          </div>
         </div>
 
-        <div class="one-half column">
+        <div class="row">
+          <div class="one-half column col-content">
+              <div class="content">
 
+              </div>
+          </div>
+
+          <div class="one-half column">
+            <div class="content">
+
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
+    </div> <!-- 外层固定框架 并让内部元素举证-->
 
     <footer>
     </footer>
