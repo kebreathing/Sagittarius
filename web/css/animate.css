@@ -1,0 +1,55 @@
+.loading-squre {
+  width: 120px;
+  height: 120px;
+  border: 5px rgba(255, 255, 255, 1) solid;
+  margin: 100px auto; /* (height-squreHeight)/2 */
+  position: relative;
+  -webkit-animation: fill_color 3s linear infinite;
+     -moz-animation: fill_color 3s linear infinite;
+          animation: fill_color 3s linear infinite;
+}
+
+.loading-squre:after{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 255, 255, 1);
+  top: -40px;   /* 指的是：离loading-square的绝对坐标的距离*/
+  left: -40px;
+  -webkit-animation: square_check 3s linear infinite;
+     -moz-animation: square_check 3s linear infinite;
+          animation: square_check 3s linear infinite;
+}
+
+
+@-webkit-keyframes square_check{
+    25%{ left: 144px; top: -40px;}
+    50%{ left: 144px; top: 144px;}
+    75%{ left: -40px; top: 144px;}
+    100%{ left: -40px; top: -40px;}
+}
+@-moz-keyframes square_check{
+  25%{ left: 144px; top: -40px;}
+  50%{ left: 144px; top: 144px;}
+  75%{ left: -40px; top: 144px;}
+  100%{ left: -40px; top: -40px;}
+}
+@keyframes square_check{
+  25%{ left: 144px; top: -40px;}
+  50%{ left: 144px; top: 144px;}
+  75%{ left: -40px; top: 144px;}
+  100%{ left: -40px; top: -40px;}
+}
+@-webkit-keyframes fill_color{
+    0%{ box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.1);}
+    100%{ box-shadow: inset 0px -120px 0px 0px rgba(255,255,255,1);}
+}
+@-moz-keyframes fill_color{
+    0%{ box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.1);}
+    100%{ box-shadow: inset 0px -120px 0px 0px rgba(255,255,255,1);}
+}
+@keyframes fill_color{
+    0%{ box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.1);}
+    100%{ box-shadow: inset 0px -120px 0px 0px rgba(255,255,255,1);}
+}
