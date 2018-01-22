@@ -1,5 +1,5 @@
 * {
-  transition: all 0.5s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 body::-webkit-scrollbar {
   display:none;
@@ -137,7 +137,7 @@ nav ul li:hover{
   }
 
   .col-content {
-    margin-top: 0.5em;
+    margin-top: 1.5em;
   }
 
   .col-content:first-child{
@@ -271,8 +271,34 @@ footer {
   border-radius: 5px 5px 0px 0px;
  }
 
+.header-paragraph {
+  /* display: block; */
+  position:relative;
+  float:left;
+  left: 20px; /* 48px + 13px*/
+  top: 4px;
+  width: 59.375%;
+  height: auto;
+  font-size: 10px;
+  text-align: left;
+}
 
+.header-user {
+  font-size: 14px;
+  font-weight: bold;
+}
 
+.header-date {
+  position: relative;
+  float:right;
+  right: 3%;
+  top:3%;
+}
+
+.publish-date {
+  font-size: 10px;
+  font-weight: bold;
+}
 
 /* content 卡片中的图片 */
 .content-image {
@@ -307,17 +333,15 @@ footer {
   height: 64px; /* 40 + 1 + 23*/
 }
 
-#spin-love {
+.spin-love {
   right: 3%;
   top: -25px;
 }
 
-#spin-comment {
+.spin-comment {
   right: 6%;
   top: -25px;
 }
-
-
 
 .spin-half-square {
   width: 40px;
@@ -341,9 +365,10 @@ footer {
     height: 16px;
     position: relative;
     top: 7px;
+    -webkit-filter: hue-rotate(0deg);
 }
 
-.spin-bottom-squre {
+.spin-bottom-square {
   width: 40px;
   margin-top: 1px;
   height: 23px;
@@ -353,6 +378,8 @@ footer {
   line-height: 23px;
 }
 
+.spin-bottom-square span {
+}
 /* 内容 */
 .content-text {
   display: block;
@@ -361,13 +388,13 @@ footer {
   min-height: 40px;
   background-color: rgba(241, 240, 240, 100);
   margin-top: 0;
-  text-align: left;
 }
 
 .main-text {
-  display: block;
-  width: 100%;
+  width: 95%;
   margin-left: 5%;
   padding-top: 40px;
+  text-align: left;
 }
+
 /* TODO: 需要对block定一个大小才可以  */
