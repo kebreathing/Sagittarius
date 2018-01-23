@@ -28,6 +28,9 @@ nav ul {
   list-style: none;
 }
 
+footer ul {
+  list-style: none;
+}
 
 nav ul li:hover{
   background-color: black;
@@ -131,7 +134,7 @@ nav ul li:hover{
 
   /* 内容框 */
   .s_container {
-    margin-top: 0.5em;
+    margin-top: 1.5em;
     width: 100%;
     text-align: center;
   }
@@ -192,6 +195,10 @@ nav ul li:hover{
     margin-top: 2em;
     width: 100%;
     text-align: center;
+  }
+
+  .col-content {
+    margin-top: 0em;
   }
 }
 
@@ -396,5 +403,19 @@ footer {
   padding-top: 40px;
   text-align: left;
 }
+
+
+/* 提示框出现 */
+/* .alert-window {
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  top: -100px;
+  left: 100px;
+  width: 120px;
+  height: 90px;
+  background-color: grey;
+  border-radius: 5%;
+} */
 
 /* TODO: 需要对block定一个大小才可以  */
