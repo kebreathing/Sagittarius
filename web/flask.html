@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- <script src="js/socket.io.min.js" type="text/javascript"></script> -->
+    <script type="text/javascript" charset="utf-8">
+      // var socket = io.connect('http://localhost:5000/test');
+      // var socket = io.connect('http://localhost:5000');
+      // socket.on('connect', function(res){
+        // socket.emit('my event', {data: 'I\'m connected'})
+        // socket.emit('namespace', {data: 'I\'m connected'})
+        // socket.emit('my event callback', {data: 'I\'m connected'})
+        // 测试是否真的可以接收到服务器的拒绝请求
+        // 接受不到任何消息，但是就是连接失败
+        // console.log(res)
+      // })
+
+      // 居然是和服务器编码一样的！
+      // 一旦链接之后，可以在任何地方使用，
+      // 即便放在socket.on('connect', function(){})
+      // socket.on('my response', function(res){
+      //   console.log(res)
+      // })
+      var cookie = document.cookie
+      if(cookie == null || cookie.length == 0)
+        console.log('Empty Cookie')
+      else
+        console.log(cookie)
+      console.log('hello')
+      // 渲染页面之后，点击按钮发出请求之后，才能保存cookie
+    </script>
+  </head>
+  <body>
+    hello flask;
+  </body>
+</html>
