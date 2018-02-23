@@ -31,6 +31,8 @@ function spin_animate(index){
         $(formatted_id +  '.spin-love .spin-bottom-square span').css('color', 'rgba(211, 69, 153, 100)')
         $(formatted_id +  '.spin-love .spin-bottom-square span').text('Love')
       } else {
+        $(formatted_id +  '.spin-love .inner-circle').css('background-color', 'black')
+        $(formatted_id +  '.spin-love .spin-bottom-square span').css('color', 'white')
         $(formatted_id + '.spin-love .spin-bottom-square span').text('UN')
       }
   }, function() {
@@ -69,6 +71,9 @@ function spin_animate(index){
     } else {
       love_cnt -= 1
       _cardArr[index].love_ed = false
+      $(formatted_id +  '.spin-love .spin-bottom-square span').text(love_cnt)
+      $(formatted_id +  '.spin-love .inner-circle').css('background-color', 'rgba(211, 69, 153, 100)')
+      $(formatted_id +  '.spin-love .spin-bottom-square span').css('color', 'rgba(211, 69, 153, 100)')
     }
 
   })
